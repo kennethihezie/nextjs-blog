@@ -2,6 +2,7 @@ import { Component } from "react";
 import Link from "next/link";
 import Head from "next/head";
 import Script from "next/script";
+import Layout from "../../components/Layout/layout";
 
 //The component can have any name, but you must export it as a default export.
 export default class FirstPost extends Component{
@@ -11,7 +12,7 @@ export default class FirstPost extends Component{
 
     render(){
         return (
-            <>
+            <Layout>
             <Head>
                 <title>First Post</title>
             </Head>
@@ -38,7 +39,7 @@ export default class FirstPost extends Component{
                 faster than the default navigation done by the browser. */}
                 <Link href="/">Back to home</Link>
             </h2>
-            </>
+            </Layout>
         )
     }
 }
