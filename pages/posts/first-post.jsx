@@ -57,7 +57,6 @@ export default class FirstPost extends Component{
                 faster than the default navigation done by the browser. */}
                 <Link href="/">Back to home</Link>
             </h2>
-
             </Layout>
         )
     }

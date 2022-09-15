@@ -1,10 +1,8 @@
 import { Component } from "react";
-import Link from "next/link";
 import Head from "next/head";
 import Script from "next/script";
 import Layout from "../../components/Layout/layout";
 import utilsStyle from '../../styles/utils.module.css'
-import Image from "next/image";
 
 //The component can have any name, but you must export it as a default export.
 export default class SecondPost extends Component{
@@ -65,4 +63,4 @@ function Profile() {
   if (!data) return <div>loading...</div>;
   return <div>hello {data.name}!</div>;
 }
-*/
+
