@@ -5,6 +5,7 @@ import Script from "next/script";
 import Layout from "../../components/Layout/layout";
 import { getSortedData } from "../../lib/post_helper";
 import utilsStyle from '../../styles/utils.module.css'
+import DateComponent from "../../components/Date/DateComponent";
 
 //The component can have any name, but you must export it as a default export.
 export default class FirstPost extends Component{
@@ -40,22 +41,25 @@ export default class FirstPost extends Component{
           <ul className={ utilsStyle.list }>
              { this.state.posts.map(({ id, date, title }) => (
               <li className={ utilsStyle.listItem } key={ id }>
-                { title }
+                <Link href={`/post/${ id }`}>{ title }</Link>
                 <br />
                 { id }
                 <br />
-                { date }
+                <small className={ utilsStyle.lightText }>
+                  <DateComponent dateString={ date } />
+                </small>
               </li>
              ))}
           </ul>
-        </section>            <h2>
+        </section>            
+        <h2>
                 {/* the / means index page */}
                 {/* The Link component enables client-side navigation 
                 between two pages in the same Next.js app.
                 Client-side navigation means that the page 
                 transition happens using JavaScript, which is 
                 faster than the default navigation done by the browser. */}
-                <Link href="/">Back to home</Link>
+                {/* <Link href="/">Back to home</Link> */}
             </h2>
             </Layout>
         )

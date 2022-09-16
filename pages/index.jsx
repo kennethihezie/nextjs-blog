@@ -1,7 +1,5 @@
 import react, { Component } from 'react'
 import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
 import utilsStyle from '../styles/utils.module.css'
 import Link from 'next/link'
 import Layout, { siteTitle } from '../components/Layout/layout'
@@ -38,6 +36,5 @@ export default class Home extends Component {
   }
 }
 
-
-
+//To create a custom 404 page, create pages/404.js. This file is statically generated at build time.
 

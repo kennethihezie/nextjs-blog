@@ -63,4 +63,5 @@ function Profile() {
   if (!data) return <div>loading...</div>;
   return <div>hello {data.name}!</div>;
 }
+*/
 
